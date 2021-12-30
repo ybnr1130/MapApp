@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import MapKit
+
+struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context) -> MKMapView {
+        return MKMapView()
+    }
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+    }
+}
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        MapView()
+            .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
     }
 }
 
